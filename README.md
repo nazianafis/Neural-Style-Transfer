@@ -1,5 +1,7 @@
 # Neural-Style-Transfer (NST)
 
+This repo contains a lightweight PyTorch implementation of the original NST paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)).
+
 ![](https://github.com/nazianafis/NST/blob/main/misc/NST.gif)
 
 ## Table of Contents
@@ -9,14 +11,11 @@
 3. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Achievements](#achievements)
-    1. [What has been achieved?](#achieved)
-    2. [What more can be achieved?](#moreachieve)
-6. [Conclusion](#reflect)
+4. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
 
-
+Neural style transfer is an optimization technique used to take two images—a content image and a style reference image (such as an artwork by a famous painter)—and blend them together so the output image looks like the content image, but “painted” in the style of the style reference image.
 
 ## Getting Started <a name="getting-started"></a>
 
@@ -33,30 +32,32 @@
         ├── misc
         ├── LICENSE
         └── README.md
-    
 
 ### Dependencies <a name="dependencies"></a>
 *    Python 3.9+
-*    Libraries: Numpy, CV2, PyTorch
+*    Libraries: Numpy, cv2, PyTorch
 *    Data Visualization: Matplotlib
 
 ### Installation <a name="installation"></a>
 
-
-
 #### To run the project:
 
+Clone the repository:
+```
+  $  git clone https://github.com/nazianafis/NST
+```
+Run the 'NST.py':
+```
+  $ python NST.py
+```
 
+## Acknowledgements <a name="ack"></a>
 
-#### Achievements <a name="achievements"></a>
+I found these repos useful:
+* [Aleksa Gordic](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
+* [PyTorch](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+* [Tensorflow](https://www.tensorflow.org/tutorials/generative/style_transfer)
 
-### What has been achieved? <a name="achieved"></a>
-
-
-
-### What more can be achieved? <a name="moreachieve"></a>
-
-
-
-## Conclusion <a name="reflect"></a>
+I found all of the content/style images from here:
+* [Unsplash](https://unsplash.com/)
 
