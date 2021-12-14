@@ -60,4 +60,5 @@ I found these sources of great help during the making of this project:
 
 I found all of the content/style images from here:
 * [Unsplash](https://unsplash.com/)
+* [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images)
 
