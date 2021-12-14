@@ -55,9 +55,8 @@ Run the 'NST.py':
 ## Acknowledgements <a name="ack"></a>
 
 I found these sources of great help during the making of this project:
-* [Aleksa Gordic](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
-* [PyTorch](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
-* [Tensorflow](https://www.tensorflow.org/tutorials/generative/style_transfer)
+* [Aleksa Gordic's Implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
+* [PyTorch's Tutorial](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
 
 I found all of the content/style images from here:
 * [Unsplash](https://unsplash.com/)
