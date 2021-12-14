@@ -42,9 +42,10 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 #### To run the project:
 
-Clone the repository:
+Clone the repository and move to the downloaded folder:
 ```
   $  git clone https://github.com/nazianafis/Neural-Style-Transfer
+  $  cd Neural-Style-Transfer
 ```
 Run the 'NST.py':
 ```
