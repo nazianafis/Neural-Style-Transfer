@@ -1,6 +1,6 @@
 # Neural-Style-Transfer (NST)
 
-This repo contains a lightweight PyTorch implementation of the paper (:link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf)).
+This repo contains a lightweight PyTorch implementation of the paper :link: [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf).
 
 ![](https://github.com/nazianafis/NST/blob/main/misc/NST.gif)
 
