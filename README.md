@@ -29,7 +29,6 @@
         |   ├── style-images
         ├── models/definitions     
         │   ├── __pycache__
-        |   |   ├── vgg_nets.cpython-39.pyc
         │   ├── vgg_nets.py
         ├── misc
         ├── LICENSE
