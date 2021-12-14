@@ -24,8 +24,8 @@ Neural style transfer is an optimization technique used to take two images—a c
         ├── NST.py
         ├── data
         |   ├── content-images
-        |   ├── output-images
         |   ├── style-images
+        |   ├── output-images
         ├── models/definitions     
         │   ├── __pycache__
         │   ├── vgg_nets.py
@@ -53,7 +53,7 @@ Run the 'NST.py':
 
 ## Acknowledgements <a name="ack"></a>
 
-I found these repos useful:
+I found these sources of great help during the making of this project:
 * [Aleksa Gordic](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
 * [PyTorch](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
 * [Tensorflow](https://www.tensorflow.org/tutorials/generative/style_transfer)
