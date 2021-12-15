@@ -7,11 +7,11 @@ This repo contains a lightweight PyTorch implementation of the paper :link: [Gat
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [File Description](description)
+2. [File Description](#description)
 3. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Example](example)
+4. [Example](#example)
 5. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
