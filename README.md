@@ -11,7 +11,7 @@ This repo contains a lightweight PyTorch implementation of the paper :link: [Gat
 3. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Example](#example)
+4. [Sample](#sample)
 5. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
@@ -59,10 +59,26 @@ Run 'NST.py':
     $ python NST.py
 ```
 
-## Example <a name="example"></a>
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c2.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="200"/>
+## Sample <a name="sample"></a>
+
+Each of the following outputs were generated using the code in this repository, with no other image manipulation. 
 <br>
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c2/c2_s5.jpg" alt="output"/>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c6.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s1.jpg" alt="style" width="273"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c6/c6_s1.jpg" alt="output" width="178"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c6.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s2.jpg" alt="style" width="356"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c6/c6_s2.jpg" alt="output" width="178"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c6.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="333"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c6/c6_s5.jpg" alt="output" width="178"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c6.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s6.jpg" alt="style" width="282"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c6/c6_s6.jpg" alt="output" width="178"/>
+
+<br><br>
 
 
 ## Acknowledgements <a name="ack"></a>
