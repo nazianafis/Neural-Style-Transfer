@@ -11,7 +11,8 @@ This repo contains a lightweight PyTorch implementation of the paper :link: [Gat
 3. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Acknowledgements](#ack)
+4. [Example](example)
+5. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
 
@@ -57,6 +58,12 @@ Run 'NST.py':
 ```
     $ python NST.py
 ```
+
+## Example <a name="example"></a>
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c2.jpg" alt="content" width="178"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="200"/>
+<br>
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c2/c2_s5.jpg" alt="output"/>
+
 
 ## Acknowledgements <a name="ack"></a>
 
