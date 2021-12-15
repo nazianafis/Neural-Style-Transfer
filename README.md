@@ -48,7 +48,7 @@ Clone the repository and move to the downloaded folder:
     $  git clone https://github.com/nazianafis/Neural-Style-Transfer
     $  cd Neural-Style-Transfer
 ```
-Go to NST.py, and set the PATH to the downloaded folder, and set CONTENT_IMAGE, STYLE_IMAGE (lines 161, 162, 163):
+Go to NST.py, and set the PATH to the downloaded folder, and set CONTENT_IMAGE, STYLE_IMAGE variables:
 ```
     $ PATH = <your_path>
     $ CONTENT_IMAGE = <content_image>
