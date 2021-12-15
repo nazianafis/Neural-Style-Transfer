@@ -44,12 +44,18 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 Clone the repository and move to the downloaded folder:
 ```
-  $  git clone https://github.com/nazianafis/Neural-Style-Transfer
-  $  cd Neural-Style-Transfer
+    $  git clone https://github.com/nazianafis/Neural-Style-Transfer
+    $  cd Neural-Style-Transfer
 ```
-Run the 'NST.py':
+Set the PATH to the downloaded folder, and set CONTENT_IMAGE, STYLE_IMAGE:
 ```
-  $ python NST.py
+    $ PATH = <your_path>
+    $ CONTENT_IMAGE = <content_image>
+    $ STYLE_IMAGE = <style_image>
+```
+Run 'NST.py':
+```
+    $ python NST.py
 ```
 
 ## Acknowledgements <a name="ack"></a>
