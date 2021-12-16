@@ -36,8 +36,8 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 ### Dependencies <a name="dependencies"></a>
 *    Python 3.9+
-*    Libraries: Numpy, cv2, PyTorch
-*    Data Visualization: Matplotlib
+*    Framework: PyTorch
+*    Libraries: os, numpy, cv2, matplotlib
 
 ### Installation <a name="installation"></a>
 
@@ -48,11 +48,11 @@ Neural style transfer is an optimization technique used to take two images—a c
     $  git clone https://github.com/nazianafis/Neural-Style-Transfer
     $  cd Neural-Style-Transfer
 ```
-2. Go to NST.py, and in it, set the PATH to your downloaded folder:
+2. Go to `NST.py`, and in it, set the `PATH` variable to your downloaded folder:
 ```
     $ PATH = <your_path>
 ```
-3. Run 'NST.py':
+3. Run `NST.py`:
 ```
     $ python NST.py
 ```
@@ -65,14 +65,14 @@ Neural style transfer is an optimization technique used to take two images—a c
 ```
 2. Move your content/style image(s) to their respective folders inside the `data` folder.
 
-3. Go to NST.py, and in it, set the PATH to your downloaded folder. Also set CONTENT_IMAGE, STYLE_IMAGE variables:
+3. Go to `NST.py`, and in it, set the `PATH` variable to your downloaded folder. Also set `CONTENT_IMAGE`, `STYLE_IMAGE` variables:
 ```
     $ PATH = <your_path>
     
     $ CONTENT_IMAGE = <your_content_image_name>
     $ STYLE_IMAGE = <you_style_image_name>
 ```
-4. Run 'NST.py':
+4. Run `NST.py`:
 ```
     $ python NST.py
 ```
