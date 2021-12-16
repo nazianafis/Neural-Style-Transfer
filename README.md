@@ -85,19 +85,7 @@ Neural style transfer is an optimization technique used to take two images—a c
 ## Output <a name="output"></a>
 
 
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s1.jpg" alt="style" width="273"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s1.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s2.jpg" alt="style" width="356"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s2.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="333"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s5.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s6.jpg" alt="style" width="282"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s6.jpg" alt="output" width="222"/>
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/misc/NST-outputs.png" alt="content" width=""/>
 
 All of these outputs were generated using the code in this repository, with no other image manipulation. 
 <br><br>
