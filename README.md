@@ -42,13 +42,12 @@ Neural style transfer is a technique that is used to take two images—a content
 
     Neural-Style-Transfer
         |
-        ├── NST.py   <-- the main python file
         ├── data
         |   ├── content-images
         |   ├── style-images
+        ├── NST.py  <-- the main python file
         ├── models/definitions     
-        │   ├── __pycache__
-        │   ├── vgg_nets.py   <-- VGG19 model definition
+        │   ├── vgg19.py   <-- VGG19 model definition
         ├── misc
         ├── LICENSE
         └── README.md
