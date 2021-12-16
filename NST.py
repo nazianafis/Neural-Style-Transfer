@@ -6,7 +6,7 @@ from torch.autograd import Variable
 from torch.optim import LBFGS
 import os
 import matplotlib.pyplot as plt
-from models.definitions.vgg_nets import Vgg19
+from models.definitions.vgg19 import Vgg19
 
 IMAGENET_MEAN_255 = [123.675, 116.28, 103.53]
 IMAGENET_STD_NEUTRAL = [1, 1, 1]
