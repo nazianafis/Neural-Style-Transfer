@@ -64,6 +64,8 @@ Neural style transfer is a technique that is used to take two images—a content
 1. Clone the repository and move to the downloaded folder:
 ```
     $  git clone https://github.com/nazianafis/Neural-Style-Transfer
+```
+```
     $  cd Neural-Style-Transfer
 ```
 2. Move your content/style image(s) to their respective folders inside the `data` folder.
@@ -71,7 +73,7 @@ Neural style transfer is a technique that is used to take two images—a content
 3. Go to `NST.py`, and in it, set the `PATH` variable to your downloaded folder. Also set `CONTENT_IMAGE`, `STYLE_IMAGE` variables as your desired images:
 ```
     $ PATH = <your_path>
-    
+   
     $ CONTENT_IMAGE = <your_content_image_name>
     $ STYLE_IMAGE = <you_style_image_name>
 ```
@@ -79,6 +81,7 @@ Neural style transfer is a technique that is used to take two images—a content
 ```
     $ python NST.py
 ```
+5. Find your generated image in the `output-images` folder inside `data`.
 
 ## Output <a name="output"></a>
 
