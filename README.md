@@ -27,14 +27,14 @@ Neural style transfer is a technique that is used to take two images—a content
 1. We take content and style images as input and pre-process them.
 2. Next, we load VGG19 which is a pre-trained CNN (convolutional neural network).
     1. Starting from the network's input layer, the first few layer activations represent low-level features like colors, and textures. As we step through the network, the final few layers represent higher-level features—like eyes.
-    2. In our case, we've used `conv1_1`, `conv2_1`, `conv3_1`, `conv4_1`, `conv5_1` for style representation, and `conv4_2` for content representation.    
+    2. In this case, we use `conv1_1`, `conv2_1`, `conv3_1`, `conv4_1`, `conv5_1` for style representation, and `conv4_2` for content representation.    
 ![](https://github.com/nazianafis/Neural-Style-Transfer/blob/main/misc/NST-architecture.png)
 
 3. We begin by cloning the content image and then iteratively changing its style. Then, we set our task as an optimization problem where we try to minimize:
     1. **content loss**, which is the L2 distance between the content and the generated image,
     2. **style loss**, which is the sum of L2 distances between the Gram matrices of the representations of the content image and the style image, extracted from different layers of VGG19.
     3. **total variation**, which is used for spatial continuity between the pixels of the generated image, thereby denoising it and giving it visual coherence.
-4. Finally, we set our gradients and optimize with the L-BFGS algorithm.
+4. Finally, we set our gradients and optimize using the L-BFGS algorithm to get the desired output.
 
 ## Getting Started <a name="getting-started"></a>
 
