@@ -101,11 +101,12 @@ All of the following outputs were generated using the code in this repository, w
 ## Acknowledgements <a name="ack"></a>
 
 I found these sources of great help during the making of this project:
+* The original paper on neural style transfer by [Gatys et al](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) 
 * Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
 * PyTorch's [Tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
-* [VGG19](https://arxiv.org/abs/1409.1556)
+* The original paper on [VGG19](https://arxiv.org/abs/1409.1556)
 
-I found all of the content/style images from here:
+All of the content/style images have been taken from here:
 * [Unsplash](https://unsplash.com/)
 * [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images)
 
