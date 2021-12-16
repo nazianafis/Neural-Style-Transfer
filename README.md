@@ -7,16 +7,21 @@ This repo contains a lightweight PyTorch implementation of the paper :link: [Gat
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [File Description](#description)
-3. [Getting Started](#getting-started)
+2. [How it works?](#working)
+3. [File Description](#description)
+4. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Output](#output)
-5. [Acknowledgements](#ack)
+5. [Output](#output)
+6. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
 
 Neural style transfer is an optimization technique used to take two images—a content image and a style reference image (such as an artwork by a famous painter)—and blend them together so the output image looks like the content image, but “painted” in the style of the style reference image.
+
+## How it works?
+
+![](https://github.com/nazianafis/Neural-Style-Transfer/blob/main/misc/NST-architecture.png)
 
 ## Getting Started <a name="getting-started"></a>
 
