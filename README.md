@@ -11,7 +11,7 @@ This repo contains a lightweight PyTorch implementation of the paper :link: [Gat
 3. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
     2. [Installation](#installation)
-4. [Sample](#sample)
+4. [Output](#output)
 5. [Acknowledgements](#ack)
 
 ## Overview <a name="overview"></a>
@@ -43,49 +43,67 @@ Neural style transfer is an optimization technique used to take two images—a c
 
 #### To run the project:
 
-Clone the repository and move to the downloaded folder:
+1. Clone the repository and move to the downloaded folder:
 ```
     $  git clone https://github.com/nazianafis/Neural-Style-Transfer
     $  cd Neural-Style-Transfer
 ```
-Go to NST.py, and set the PATH to the downloaded folder, and set CONTENT_IMAGE, STYLE_IMAGE variables:
+2. Go to NST.py, and in it, set the PATH to your downloaded folder:
 ```
     $ PATH = <your_path>
-    $ CONTENT_IMAGE = <content_image>
-    $ STYLE_IMAGE = <style_image>
 ```
-Run 'NST.py':
+3. Run 'NST.py':
+```
+    $ python NST.py
+```
+#### To try Neural Style Transfer on images of your own:
+
+1. Clone the repository and move to the downloaded folder:
+```
+    $  git clone https://github.com/nazianafis/Neural-Style-Transfer
+    $  cd Neural-Style-Transfer
+```
+2. Move your content/style image(s) to their respective folders inside the `data` folder.
+
+3. Go to NST.py, and in it, set the PATH to your downloaded folder. Also set CONTENT_IMAGE, STYLE_IMAGE variables:
+```
+    $ PATH = <your_path>
+    
+    $ CONTENT_IMAGE = <your_content_image_name>
+    $ STYLE_IMAGE = <you_style_image_name>
+```
+4. Run 'NST.py':
 ```
     $ python NST.py
 ```
 
-## Sample <a name="sample"></a>
+## Output <a name="output"></a>
+
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s1.jpg" alt="style" width="273"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s1.jpg" alt="output" width="222"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s2.jpg" alt="style" width="356"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s2.jpg" alt="output" width="222"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="333"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s5.jpg" alt="output" width="222"/>
+
+<br>
+
+<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s6.jpg" alt="style" width="282"/> <img src="https://github.com/nazianafis/NST.github.io/blob/main/data/output-images/c1/c1_s6.jpg" alt="output" width="222"/>
 
 Each of the following outputs were generated using the code in this repository, with no other image manipulation. 
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c1/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s1.jpg" alt="style" width="273"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c1/c1_s1.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s2.jpg" alt="style" width="356"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c1/c1_s2.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s5.jpg" alt="style" width="333"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c1/c1_s5.jpg" alt="output" width="222"/>
-
-<br>
-
-<img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/content-images/c1.jpg" alt="content" width="222"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/style-images/s6.jpg" alt="style" width="282"/> <img src="https://github.com/nazianafis/Neural-Style-Transfer/blob/main/data/output-images/c1/c1_s6.jpg" alt="output" width="222"/>
-
 <br><br>
 
 
 ## Acknowledgements <a name="ack"></a>
 
 I found these sources of great help during the making of this project:
-* [Aleksa Gordic's Implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
-* [PyTorch's Tutorial](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+* Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
+* PyTorch's [Tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
+* [VGG19](https://arxiv.org/abs/1409.1556)
 
 I found all of the content/style images from here:
 * [Unsplash](https://unsplash.com/)
