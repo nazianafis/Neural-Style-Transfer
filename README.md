@@ -1,5 +1,5 @@
 <br>
-<img src="https://github.com/nazianafis/NST.github.io/blob/main/misc/NST-gif.gif" alt="header" align="right" width="270"/>
+<img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-gif.gif" alt="header" align="right" width="270"/>
 
 # Neural-Style-Transfer (NST)
 
@@ -28,7 +28,7 @@ Neural style transfer is a technique that is used to take two images—a content
 2. Next, we load VGG19 which is a pre-trained CNN (convolutional neural network).
     1. Starting from the network's input layer, the first few layer activations represent low-level features like colors, and textures. As we step through the network, the final few layers represent higher-level features—like eyes.
     2. In this case, we use `conv1_1`, `conv2_1`, `conv3_1`, `conv4_1`, `conv5_1` for style representation, and `conv4_2` for content representation.    
-![](https://github.com/nazianafis/NST.github.io/blob/main/misc/NST-architecture.png)
+![](https://github.com/nazianafis/Resources/blob/main/NST/NST-architecture.png)
 
 3. We begin by cloning the content image and then iteratively changing its style. Then, we set our task as an optimization problem where we try to minimize:
     1. **content loss**, which is the L2 distance between the content and the generated image,
@@ -83,7 +83,7 @@ Neural style transfer is a technique that is used to take two images—a content
 
 ## Output <a name="output"></a>
 
-<img src="https://github.com/nazianafis/NST.github.io/blob/main/misc/NST-outputs.png" alt="content" width="700"/>
+<img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
 (All outputs were generated using the code in this repository.)
 <br><br>
 
