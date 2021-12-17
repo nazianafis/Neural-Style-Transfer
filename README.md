@@ -94,6 +94,5 @@ Neural style transfer is a technique that is used to take two images—a content
 * Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
 * The original paper on neural style transfer by [Gatys et al](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) 
 * The original paper on [VGG19](https://arxiv.org/abs/1409.1556)
-* Cat against the blue background photo by <a href="https://unsplash.com/@cedric_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cédric VT</a> on <a href="https://unsplash.com/s/photos/cat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-* All other content/style images from [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/).
+* All content/style images from [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/).
 
