@@ -14,7 +14,7 @@ This repository contains a lightweight PyTorch implementation of the seminal pap
 3. [File Description](#description)
 4. [Getting Started](#getting-started)
     1. [Dependencies](#dependencies)
-    2. [Installation](#installation)
+    2. [Usage](#usage)
 5. [Output](#output)
 6. [Acknowledgements](#ack)
 
@@ -33,12 +33,12 @@ Neural style transfer is a technique that is used to take two images—a content
 3. We begin by cloning the content image and then iteratively changing its style. Then, we set our task as an optimization problem where we try to minimize:
     1. **content loss**, which is the L2 distance between the content and the generated image,
     2. **style loss**, which is the sum of L2 distances between the Gram matrices of the representations of the content image and the style image, extracted from different layers of VGG19.
-    3. **total variation**, which is used for spatial continuity between the pixels of the generated image, thereby denoising it and giving it visual coherence.
+    3. **total variation loss**, which is used for spatial continuity between the pixels of the generated image, thereby denoising it and giving it visual coherence.
 4. Finally, we set our gradients and optimize using the L-BFGS algorithm to get the desired output.
 
 ## Getting Started <a name="getting-started"></a>
 
-### File Description <a name="description"></a>
+#### File Description <a name="description"></a>
 
     Neural-Style-Transfer
         ├── data
@@ -50,14 +50,14 @@ Neural style transfer is a technique that is used to take two images—a content
         ├── LICENSE
         └── README.md
 
-### Dependencies <a name="dependencies"></a>
+#### Dependencies <a name="dependencies"></a>
 *    Python 3.9+
 *    Framework: PyTorch
-*    Libraries: os, numpy, cv2, matplotlib
+*    Libraries: os, numpy, cv2, matplotlib, torchvision
 
-### Installation <a name="installation"></a>
+#### Usage <a name="usage"></a>
 
-#### To try Neural Style Transfer on images of your own:
+To implement Neural Style Transfer on images of your own:
 
 1. Clone the repository and move to the downloaded folder:
 ```
@@ -90,9 +90,9 @@ Neural style transfer is a technique that is used to take two images—a content
 
 ## Acknowledgements <a name="ack"></a>
 
-* PyTorch's [tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html)
-* Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer)
-* The original paper on neural style transfer by [Gatys et al](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) 
-* The original paper on [VGG19](https://arxiv.org/abs/1409.1556)
-* All content/style images from [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/).
+* PyTorch's [tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
+* Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer).
+* The original paper on neural style transfer by [Gatys et al](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) .
+* The original paper on [VGG19](https://arxiv.org/abs/1409.1556).
+* [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/) for all the content and style images.
 
