@@ -160,7 +160,7 @@ def neural_style_transfer(config):
 
 PATH = '/home/nn007/Desktop/myAssignments/DL/DL-project'
 CONTENT_IMAGE = 'c1.jpg'
-STYLE_IMAGE = 's6.jpg'
+STYLE_IMAGE = 's1.jpg'
 
 default_resource_dir = os.path.join(PATH, 'data')
 content_images_dir = os.path.join(default_resource_dir, 'content-images')
