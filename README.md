@@ -96,3 +96,4 @@ To implement Neural Style Transfer on images of your own:
 * The original paper on [VGG19](https://arxiv.org/abs/1409.1556).
 * [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/) for all the content and style images.
 
+You might want to check out [this supporting Medium publication](https://nazianafis.medium.com/a-lightweight-pytorch-implementation-of-neural-style-transfer-86603e5eb551) by me regarding the same.
