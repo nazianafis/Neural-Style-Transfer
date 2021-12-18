@@ -85,8 +85,10 @@ To implement Neural Style Transfer on images of your own:
 
 ## Output <a name="output"></a>
 
+I generated these images using no image manipulation program(s) other than the code described in this article. I encourage you to try it out for yourself too!
+
 <img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
-I generated these images using no image manipulation program(s) other than the code described in this article. I encourage you too to try it out for yourself!
+
 <br><br>
 
 
