@@ -55,7 +55,7 @@ Neural style transfer is a technique that is used to take two images—a content
 #### Dependencies <a name="dependencies"></a>
 *    Python 3.9+
 *    Framework: PyTorch
-*    Libraries: os, numpy, cv2, matplotlib, torchvision
+*    Libraries: os, numpy, cv2, torchvision
 
 #### Usage <a name="usage"></a>
 
