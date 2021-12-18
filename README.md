@@ -86,11 +86,13 @@ To implement Neural Style Transfer on images of your own:
 ## Output <a name="output"></a>
 
 <img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
-(All outputs were generated using the code in this repository.)
+I generated these images using no image manipulation program(s) other than the code described in this article. I encourage you too to try it out for yourself!
 <br><br>
 
 
 ## Acknowledgements <a name="ack"></a>
+
+These are some of the resources I referred to while working on this project. You may want to check them out.
 
 * PyTorch's [tutorial on NST](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
 * Aleksa Gordic's [implementation](https://github.com/gordicaleksa/pytorch-neural-style-transfer).
