@@ -12,9 +12,12 @@ IMAGENET_MEAN_255 = [123.675, 116.28, 103.53]
 IMAGENET_STD_NEUTRAL = [1, 1, 1]
 
 def load_image(img_path,target_shape="None"):
+    '''
+    Load and resize the image.
+    '''
     if not os.path.exists(img_path):
         raise Exception(f'Path does not exist: {img_path}')
-    img = cv.imread(img_path)[:, :, ::-1]
+    img = cv.imread(img_path)[:, :, ::-1]                   # convert BGR to RGB when reading
     if target_shape is not None:
         if isinstance(target_shape, int) and target_shape != -1:
             current_height, current_width = img.shape[:2]
@@ -28,6 +31,9 @@ def load_image(img_path,target_shape="None"):
     return img
 
 def prepare_img(img_path, target_shape, device):
+    '''
+    Normalize the image.
+    '''
     img = load_image(img_path, target_shape=target_shape)
     transform = transforms.Compose([
         transforms.ToTensor(),
@@ -39,14 +45,25 @@ def prepare_img(img_path, target_shape, device):
 def save_image(img, img_path):
     if len(img.shape) == 2:
         img = np.stack((img,) * 3, axis=-1)
-    cv.imwrite(img_path, img[:, :, ::-1])
+    cv.imwrite(img_path, img[:, :, ::-1])                   # convert RGB to BGR while writing
 
 def generate_out_img_name(config):
+    '''
+    Generate a name for the output image.
+    Example: 'c1-s1.jpg'
+    where c1: content_img_name, and
+          s1: style_img_name.
+    '''
     prefix = os.path.basename(config['content_img_name']).split('.')[0] + '_' + os.path.basename(config['style_img_name']).split('.')[0]
     suffix = f'{config["img_format"][1]}'
     return prefix + suffix
 
 def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_iterations, should_display=False):
+    '''
+    Save the generated image.
+    If saving_freq == -1, only the final output image will be saved.
+    Else, intermediate images can be saved too.
+    '''
     saving_freq = config['saving_freq']
     out_img = optimizing_img.squeeze(axis=0).to('cpu').detach().numpy()
     out_img = np.moveaxis(out_img, 0, 2)
@@ -72,6 +89,9 @@ def get_uint8_range(x):
         raise ValueError(f'Expected numpy array, got {type(x)}')
 
 def prepare_model(device):
+    '''
+    Load VGG19 model into local cache.
+    '''
     model = Vgg19(requires_grad=False, show_progress=True)
     content_feature_maps_index = model.content_feature_maps_index
     style_feature_maps_indices = model.style_feature_maps_indices
@@ -81,6 +101,9 @@ def prepare_model(device):
     return model.to(device).eval(), content_fms_index_name, style_fms_indices_names
 
 def gram_matrix(x, should_normalize=True):
+    '''
+    Generate gram matrices of the representations of content and style images.
+    '''
     (b, ch, h, w) = x.size()
     features = x.view(b, ch, w * h)
     features_t = features.transpose(1, 2)
@@ -90,9 +113,15 @@ def gram_matrix(x, should_normalize=True):
     return gram
 
 def total_variation(y):
+    '''
+    Calculate total variation.
+    '''
     return torch.sum(torch.abs(y[:, :, :, :-1] - y[:, :, :, 1:])) + torch.sum(torch.abs(y[:, :, :-1, :] - y[:, :, 1:, :]))
 
 def build_loss(neural_net, optimizing_img, target_representations, content_feature_maps_index, style_feature_maps_indices, config):
+    '''
+    Calculate content_loss, style_loss, and total_variation_loss.
+    '''
     target_content_representation = target_representations[0]
     target_style_representation = target_representations[1]
     current_set_of_feature_maps = neural_net(optimizing_img)
@@ -108,6 +137,10 @@ def build_loss(neural_net, optimizing_img, target_representations, content_featu
     return total_loss, content_loss, style_loss, tv_loss
 
 def make_tuning_step(neural_net, optimizer, target_representations, content_feature_maps_index, style_feature_maps_indices, config):
+    '''
+    Performs a step in the tuning loop.
+    (We are tuning only the pixels, not the weights.)
+    '''
     def tuning_step(optimizing_img):
         total_loss, content_loss, style_loss, tv_loss = build_loss(neural_net, optimizing_img, target_representations, content_feature_maps_index, style_feature_maps_indices, config)
         total_loss.backward()
@@ -117,6 +150,9 @@ def make_tuning_step(neural_net, optimizer, target_representations, content_feat
     return tuning_step
 
 def neural_style_transfer(config):
+    '''
+    The main Neural Style Transfer method.
+    '''
     content_img_path = os.path.join(config['content_images_dir'], config['content_img_name'])
     style_img_path = os.path.join(config['style_images_dir'], config['style_img_name'])
     out_dir_name = 'combined_' + os.path.split(content_img_path)[1].split('.')[0] + '_' + os.path.split(style_img_path)[1].split('.')[0]
@@ -125,6 +161,7 @@ def neural_style_transfer(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     content_img = prepare_img(content_img_path, config['height'], device)
     style_img = prepare_img(style_img_path, config['height'], device)
+    
     if config['init_method'] == 'content':
         init_img = content_img
     else:
