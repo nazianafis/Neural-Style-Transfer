@@ -7,6 +7,8 @@ Neural Style Transfer is the ability to create a new image (known as a pastiche)
 
 This repository contains a lightweight PyTorch implementation of the seminal paper on neural style transfer by [Gatys et al.](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) To make the model faster and more accurate, a pre-trained VGG19 model is used.
 
+You can check out [this Medium publication](https://nazianafis.medium.com/a-lightweight-pytorch-implementation-of-neural-style-transfer-86603e5eb551) by me regarding the same.
+
 ## Table of Contents
 
 1. [Overview](#overview)
@@ -96,4 +98,3 @@ To implement Neural Style Transfer on images of your own:
 * The original paper on [VGG19](https://arxiv.org/abs/1409.1556).
 * [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/) for all the content and style images.
 
-You might want to check out [this supporting Medium publication](https://nazianafis.medium.com/a-lightweight-pytorch-implementation-of-neural-style-transfer-86603e5eb551) by me regarding the same.
