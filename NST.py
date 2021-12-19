@@ -180,7 +180,7 @@ def neural_style_transfer(config):
     optimizer.step(closure)
     return dump_path
 
-PATH = '/home/nn007/Neural-Style-Transfer'
+PATH = ''
 CONTENT_IMAGE = 'c1.jpg'
 STYLE_IMAGE = 's1.jpg'
 
