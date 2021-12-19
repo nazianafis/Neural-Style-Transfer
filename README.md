@@ -89,8 +89,6 @@ I generated these images using no image manipulation program(s) other than the c
 
 <img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
 
-<br><br>
-
 
 ## Acknowledgements <a name="ack"></a>
 
