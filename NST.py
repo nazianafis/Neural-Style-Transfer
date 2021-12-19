@@ -5,7 +5,6 @@ from torchvision import transforms
 from torch.autograd import Variable
 from torch.optim import LBFGS
 import os
-import matplotlib.pyplot as plt
 from models.definitions.vgg19 import Vgg19
 
 IMAGENET_MEAN_255 = [123.675, 116.28, 103.53]
@@ -16,7 +15,7 @@ def load_image(img_path,target_shape="None"):
     Load and resize the image.
     '''
     if not os.path.exists(img_path):
-        raise Exception(f'Path does not exist: {img_path}')
+        raise Exception(f'Path not found: {img_path}')
     img = cv.imread(img_path)[:, :, ::-1]                   # convert BGR to RGB when reading
     if target_shape is not None:
         if isinstance(target_shape, int) and target_shape != -1:
@@ -58,35 +57,24 @@ def generate_out_img_name(config):
     suffix = f'{config["img_format"][1]}'
     return prefix + suffix
 
-def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_iterations, should_display=False):
+def save_and_maybe_display(optimizing_img, dump_path, config, img_id, num_of_iterations):
     '''
     Save the generated image.
     If saving_freq == -1, only the final output image will be saved.
     Else, intermediate images can be saved too.
     '''
-    saving_freq = config['saving_freq']
+    saving_freq = -1
     out_img = optimizing_img.squeeze(axis=0).to('cpu').detach().numpy()
     out_img = np.moveaxis(out_img, 0, 2)
 
-    if img_id == num_of_iterations-1 or (saving_freq > 0 and img_id % saving_freq == 0):
+    if img_id == num_of_iterations-1 :
         img_format = config['img_format']
         out_img_name = str(img_id).zfill(img_format[0]) + img_format[1] if saving_freq != -1 else generate_out_img_name(config)
         dump_img = np.copy(out_img)
         dump_img += np.array(IMAGENET_MEAN_255).reshape((1, 1, 3))
         dump_img = np.clip(dump_img, 0, 255).astype('uint8')
         cv.imwrite(os.path.join(dump_path, out_img_name), dump_img[:, :, ::-1])
-    if should_display:
-        plt.imshow(np.uint8(get_uint8_range(out_img)))
-        plt.show()
-
-def get_uint8_range(x):
-    if isinstance(x, np.ndarray):
-        x -= np.min(x)
-        x /= np.max(x)
-        x *= 255
-        return x
-    else:
-        raise ValueError(f'Expected numpy array, got {type(x)}')
+    
 
 def prepare_model(device):
     '''
@@ -162,22 +150,19 @@ def neural_style_transfer(config):
     content_img = prepare_img(content_img_path, config['height'], device)
     style_img = prepare_img(style_img_path, config['height'], device)
     
-    if config['init_method'] == 'content':
-        init_img = content_img
-    else:
-        style_img_resized = prepare_img(style_img_path, np.asarray(content_img.shape[2:]), device)
-        init_img = style_img_resized
+    init_img = content_img
+    
     optimizing_img = Variable(init_img, requires_grad=True)
     neural_net, content_feature_maps_index_name, style_feature_maps_indices_names = prepare_model(device)
-    print(f'Using {config["model"]} in the optimization procedure.')
+    print(f'Using VGG19 in the optimization procedure.')
     content_img_set_of_feature_maps = neural_net(content_img)
     style_img_set_of_feature_maps = neural_net(style_img)
     target_content_representation = content_img_set_of_feature_maps[content_feature_maps_index_name[0]].squeeze(axis=0)
     target_style_representation = [gram_matrix(x) for cnt, x in enumerate(style_img_set_of_feature_maps) if cnt in style_feature_maps_indices_names[0]]
     target_representations = [target_content_representation, target_style_representation]
-    num_of_iterations = {"lbfgs": 1000}
+    num_of_iterations = 1000
     
-    optimizer = LBFGS((optimizing_img,), max_iter=num_of_iterations['lbfgs'], line_search_fn='strong_wolfe')
+    optimizer = LBFGS((optimizing_img,), max_iter=num_of_iterations, line_search_fn='strong_wolfe')
     cnt = 0
 
     def closure():
@@ -189,13 +174,13 @@ def neural_style_transfer(config):
             total_loss.backward()
         with torch.no_grad():
             print(f'L-BFGS | iteration: {cnt:03}, total loss={total_loss.item():12.4f}, content_loss={config["content_weight"] * content_loss.item():12.4f}, style loss={config["style_weight"] * style_loss.item():12.4f}, tv loss={config["tv_weight"] * tv_loss.item():12.4f}')
-            save_and_maybe_display(optimizing_img, dump_path, config, cnt, num_of_iterations[config['optimizer']])
+            save_and_maybe_display(optimizing_img, dump_path, config, cnt, num_of_iterations)
         cnt += 1
         return total_loss
     optimizer.step(closure)
     return dump_path
 
-PATH = ''
+PATH = '/home/nn007/Neural-Style-Transfer'
 CONTENT_IMAGE = 'c1.jpg'
 STYLE_IMAGE = 's1.jpg'
 
@@ -205,7 +190,7 @@ style_images_dir = os.path.join(default_resource_dir, 'style-images')
 output_img_dir = os.path.join(default_resource_dir, 'output-images')
 img_format = (4, '.jpg')
 
-optimization_config = {'content_img_name': CONTENT_IMAGE, 'style_img_name': STYLE_IMAGE, 'height': 400, 'content_weight': 100000.0, 'style_weight': 30000.0, 'tv_weight': 1.0, 'optimizer': 'lbfgs', 'model': 'vgg19', 'init_method': 'content', 'saving_freq': -1}
+optimization_config = {'content_img_name': CONTENT_IMAGE, 'style_img_name': STYLE_IMAGE, 'height': 400, 'content_weight': 100000.0, 'style_weight': 30000.0, 'tv_weight': 1.0}
 optimization_config['content_images_dir'] = content_images_dir
 optimization_config['style_images_dir'] = style_images_dir
 optimization_config['output_img_dir'] = output_img_dir
