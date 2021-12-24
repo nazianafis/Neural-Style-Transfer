@@ -19,6 +19,7 @@ This repository contains a lightweight PyTorch implementation of art style trans
     2. [Usage](#usage)
 5. [Output](#output)
 6. [Acknowledgements](#ack)
+7. [Licence](#license)
 
 ## Overview <a name="overview"></a>
 
@@ -100,3 +101,7 @@ These are some of the resources I referred to while working on this project. You
 * The original paper on [VGG19](https://arxiv.org/abs/1409.1556).
 * [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images), [Unsplash](https://unsplash.com/) for all the content and style images.
 
+
+## License <a name="license"></a>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
