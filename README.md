@@ -19,7 +19,7 @@ This repository contains a lightweight PyTorch implementation of art style trans
     2. [Usage](#usage)
 5. [Output](#output)
 6. [Acknowledgements](#ack)
-7. [Licence](#license)
+7. [License](#license)
 
 ## Overview <a name="overview"></a>
 
