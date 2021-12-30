@@ -41,7 +41,7 @@ Neural style transfer is a technique that is used to take two images—a content
 
 ## Getting Started <a name="getting-started"></a>
 
-#### File Description <a name="description"></a>
+### File Description <a name="description"></a>
 
     Neural-Style-Transfer
         ├── data
@@ -53,14 +53,18 @@ Neural style transfer is a technique that is used to take two images—a content
         ├── LICENSE
         └── README.md
 
-#### Dependencies <a name="dependencies"></a>
+### Dependencies <a name="dependencies"></a>
 *    Python 3.9+
 *    Framework: PyTorch
 *    Libraries: os, numpy, cv2, matplotlib, torchvision
 
-#### Usage <a name="usage"></a>
+### Usage <a name="usage"></a>
 
-To implement Neural Style Transfer on images of your own:
+```
+    $ pip install -r requirements.txt
+```
+
+#### To implement Neural Style Transfer on images of your own:
 
 1. Clone the repository and move to the downloaded folder:
 ```
@@ -86,7 +90,7 @@ To implement Neural Style Transfer on images of your own:
 
 ## Output <a name="output"></a>
 
-I generated these images using no image manipulation program(s) other than the code described in this article. I encourage you to try it out for yourself too!
+These images were generated using no image manipulation program(s) other than the code described in this article. I encourage you to try it.
 
 <img src="https://github.com/nazianafis/Resources/blob/main/NST/NST-outputs.png" alt="content" width="700"/>
 
